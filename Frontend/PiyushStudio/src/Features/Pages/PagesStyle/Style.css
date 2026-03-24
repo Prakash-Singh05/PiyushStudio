@@ -1,0 +1,161 @@
+@font-face {
+    font-family: font-1;
+    src: url('../Fonts/font-family-1.woff2');
+}
+@font-face {
+    font-family: font-2;
+    src: url('../Fonts/Font-family-2.woff');
+}
+@font-face {
+    font-family: font-3;
+    src: url('../Fonts/font-family-3.woff');
+}
+@font-face {
+    font-family: font-4;
+    src: url("../Fonts/font-neo-4.woff");
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+.hero-section{
+    margin-top: 20px;
+}
+.welcome-line{
+    font-family: font-1;
+    font-weight: 500;
+}
+.hero-text{
+    font-family: font-3;
+}
+
+.image-filter {
+background: white;
+  object-fit: cover;
+  box-sizing: border-box;
+  filter: brightness(0.75) contrast(1.25) saturate(1.5);
+  transition: filter 0.4s ease;
+}
+/* On hover → remove filter */
+.image-filter:hover {
+    filter: brightness(0) contrast(-2) saturate(-1);
+    transition: filter 0.4s ease;
+}
+.services-heading{
+    font-family: font-4;
+    font-weight: bold;
+}
+.overlay {
+    overflow: hidden;
+    position: absolute;
+    inset: 0; /* top:0, right:0, bottom:0, left:0 */
+    background: linear-gradient(
+        to top,
+        rgba(208, 90, 43, 0.7) 0%,
+        rgba(208, 90, 43, 0.3) 40%,
+        rgba(208, 90, 43, 0.1) 70%,
+        transparent 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        transform: translateY(42%);
+        opacity: 0;
+        transition: all 0.5s ease-out;
+    }
+    
+    /* Hover effect (parent should have class 'group') */
+    .group:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Services */
+.services-title{
+    color: black;
+    font-family: font-2;
+}
+
+/* ================= CSS FILE: gallery.css ================= */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #3b82f6;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-family: font-4;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.masonry {
+  column-count: 4;
+  column-gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .masonry { column-count: 3; }
+}
+
+@media (max-width: 768px) {
+  .masonry { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+  .masonry { column-count: 1; }
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img,
+.card video {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img,
+.card:hover video {
+  transform: scale(1.05);
+}
+
+.videoWrapper {
+  position: relative;
+}
+
+.playBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.videoWrapper:hover .playBtn {
+  opacity: 1;
+}
+ /* Contact contact-tag-line */
+ .contact-tag-line{
+  font-family: font-3;
+ }
