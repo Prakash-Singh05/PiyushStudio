@@ -8,6 +8,7 @@ import About from './Components/About.jsx'
 import Gallery from './Components/Gallery.jsx'
 import ContactForm from './Components/Contact.jsx'
 import ContactInfo from './Components/ContactInfo.jsx'
+import ReviewsSection from './Components/ReviewData.jsx'
 
 const HomePage = () => {
 
@@ -37,12 +38,14 @@ const HomePage = () => {
                 <section className="py-16 ">
                     <Gallery />
                 </section>
-
                 {/* Contact */}
-                <section className="py-16 bg-[#FDF5EB] ">
+                <section className="py-14 bg-[#FDF5EB] ">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row gap-2 justify-center items-center">
-
+                        <div className="text-center mb-10 sm:mb-0">
+                            <h2 className="text-blue-500 text-[#EBAA3E] text-5xl  services-title contact-heading">Contact Us</h2>
+                            
+                        </div>
+                        <div className="flex flex-col lg:flex-row lg:gap-2 md:gap-1 justify-center items-center">
                             <div className="flex-1">
                                 <ContactInfo />
                             </div>
@@ -56,26 +59,8 @@ const HomePage = () => {
                 </section>
 
                 {/* TESTIMONIAL */}
-                <section className="py-16 bg-gray-100">
-                    <div className="max-w-7xl mx-auto px-4 text-center">
-
-                        <p className="text-blue-500 mb-2">Client Review</p>
-                        <h2 className="text-3xl font-bold mb-10">
-                            Trusted By Clients
-                        </h2>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className="bg-white p-4 rounded-lg shadow">
-                                    <p className="text-gray-600 mb-4">
-                                        Amazing service and quality work!
-                                    </p>
-                                    <h4 className="font-bold">Client {i}</h4>
-                                </div>
-                            ))}
-                        </div>
-
-                    </div>
+                <section className="py-16">
+                    <ReviewsSection />
                 </section>
             </div>
         </main>

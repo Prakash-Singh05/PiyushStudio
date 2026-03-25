@@ -32,22 +32,20 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-12 px-4 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-
+    <section className="py-12 w-full rounded-2xl overflow-hidden">
         {/* Heading */}
-        <div className="text-center mb-10">
-          <p className="text-blue-500 mb-2 text-[#EBAA3E] text-3xl  services-title">Contact Us</p>
-          <p className="text-gray-500 mt-2 text-sm contact-tag-line">
-            Feel free to contact us anytime. We will get back to you soon.
-          </p>
-        </div>
-
+        
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-6 md:p-8 rounded-2xl shadow-md space-y-6"
+          className="bg-white p-8 md:p-8 rounded-3xl shadow-md space-y-6"
         >
+          <div className="text-center mb-10">
+                            <p className="text-blue-500 mb-2 text-[#EBAA3E] text-3xl  services-title">Get In Touch</p>
+                            <p className="text-gray-500 mt-2 text-sm contact-tag-line">
+                                Feel free to contact us anytime. We will get back to you soon.
+                            </p>
+                        </div>
           {/* Name + Email */}
           <div className="grid md:grid-cols-2 gap-4">
             <input
@@ -102,7 +100,7 @@ const ContactForm = () => {
           </button>
         </form>
 
-      </div>
+      
     </section>
   );
 };

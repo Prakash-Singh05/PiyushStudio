@@ -5,22 +5,22 @@ import Button from '../../Components/Button'
 
 const Hero = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center hero-section">
+    <div className="lg:max-w-7xl mx-auto lg:px-4 grid lg:grid-cols-2 gap-10 items-center hero-section pt-10 lg:pt-0">
 
                         <div>
-                            <p className=" uppercase lg:text-3xl mb-2 welcome-line bold">
+                            <p className="uppercase lg:text-3xl mb-2 welcome-line bold text-center lg:text-left">
                                 Welcome To <br /> Piyush Digital Photo Studio
                             </p>
 
-                            <h1 className="text-6xl font-bold mb-4 text-[#EBAA3E] hero-text">
+                            <h1 className="text-6xl  font-bold mb-4 text-[#EBAA3E] hero-text bold text-center lg:text-left">
                                 All Types of Photography  From Lens to Drone
                             </h1>
 
-                            <p className="text-gray-600 mb-6 welcome-line text-xl">
+                            <p className="text-gray-600 mb-6 welcome-line lg:text-xl text-md text-center lg:text-left">
                                 Professional photography with creative excellence.
                             </p>
 
-                            <div className="">
+                            <div className="m-auto flex justify-center lg:justify-start">
                                  <Button btn_text="Get Contact" />
                             </div>
                         </div>
