@@ -6,7 +6,6 @@ import Button from '../../Components/Button'
 const Hero = () => {
   return (
     <div className="lg:max-w-7xl mx-auto lg:px-4 grid lg:grid-cols-2 gap-10 items-center hero-section pt-10 lg:pt-0">
-
                         <div>
                             <p className="uppercase lg:text-3xl mb-2 welcome-line bold text-center lg:text-left">
                                 Welcome To <br /> Piyush Digital Photo Studio
@@ -24,7 +23,6 @@ const Hero = () => {
                                  <Button btn_text="Get Contact" />
                             </div>
                         </div>
-
                         <div className="grid grid-row-2 gap-3">
                             <div className="hero-top-image flex justify-center items-center gap-4">
                                 <div className="relative lg:w-[290px] lg:h-[290px] overflow-hidden  group">
@@ -37,7 +35,6 @@ const Hero = () => {
                                         <p className="text-white p-4 text-lg font-semibold">
                                             Wedding & Event Shoots
                                         </p>
-
                                     </div>
                                 </div>
                                 <div className="relative lg:w-[200px] lg:h-[200px] overflow-hidden  group">
@@ -64,7 +61,7 @@ const Hero = () => {
                                         <p className="text-white p-4 text-lg font-semibold">
                                             Wedding Photography
                                         </p>
- 
+
                                     </div>
                                 </div>
                                 <div className="relative lg:w-[290px] lg:h-[290px] overflow-hidden  group">
