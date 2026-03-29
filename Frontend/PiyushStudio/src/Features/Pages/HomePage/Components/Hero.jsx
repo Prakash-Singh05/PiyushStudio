@@ -5,7 +5,7 @@ import Button from '../../Components/Button'
 
 const Hero = () => {
   return (
-    <div className="lg:max-w-7xl mx-auto lg:px-4 grid lg:grid-cols-2 gap-10 items-center hero-section pt-10 lg:pt-0">
+    <div className="lg:max-w-7xl mx-auto lg:px-4 grid lg:grid-cols-2 gap-10 items-center hero-section lg:pt-4  pt-10">
                         <div>
                             <p className="uppercase lg:text-3xl mb-2 welcome-line bold text-center lg:text-left">
                                 Welcome To <br /> Piyush Digital Photo Studio

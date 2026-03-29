@@ -57,7 +57,6 @@ const HomePage = () => {
                         </div>
                     </div>
                 </section>
-
                 {/* TESTIMONIAL */}
                 <section className="py-16">
                     <ReviewsSection />

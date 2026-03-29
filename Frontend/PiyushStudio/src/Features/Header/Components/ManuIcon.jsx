@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Checkbox = ({isOpen,toggleMenu}) => {
   return (
     <StyledWrapper>
-      <label className="hamburger lg:hidden">
+      <label className="hamburger lg:hidden fixed top-4 right-4 z-50 cursor-pointer">
         <input type="checkbox" 
         checked={isOpen}
           onChange={toggleMenu}

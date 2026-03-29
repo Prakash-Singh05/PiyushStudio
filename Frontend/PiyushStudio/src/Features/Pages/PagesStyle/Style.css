@@ -14,6 +14,10 @@
     font-family: font-4;
     src: url("../Fonts/font-neo-4.woff");
 }
+.nav-items{
+  font-family: font-3;
+  font-weight: bold;
+}
 section{
     display: flex;
     justify-content: center;

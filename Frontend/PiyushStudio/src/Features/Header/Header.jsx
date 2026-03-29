@@ -17,66 +17,70 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
+    { name: "Team", path: "/team" },
   ];
 
   return (
-    <nav className="fixed w-full bg-white shadow z-50 ">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex justify-evenly items-center h-16">
+    <nav className="fixed w-full z-50 p-3 backdrop-blur-lg bg-white/10 border-b border-white/20 shadow-lg">
+  <div className="max-w-7xl mx-auto lg:px-8">
+    <div className="flex justify-between items-center h-16">
           {/* Left */}
           <div className="hidden lg:flex space-x-8">
             {navLinks.slice(0, 3).map((link) => (
-              <Link key={link.name} to={link.path} className="hover:text-blue-500">
+              <Link key={link.name} to={link.path} className="hover:text-[#EBAA3E] nav-items text-xl">
                 {link.name}
               </Link>
             ))}
           </div>
-
           {/* Logo */}
-          <div className="w-30 h-30 rounded flex justify-center items-center lg:mt-0 mt-10">
+          <div className="rounded lg:m-auto m-0">
             <img
-              src="src\Features\images\Piyush_studio_Logo.jpeg"
+              src="https://ik.imagekit.io/prakash0522/piyush_logo_transparent.png"
               alt="logo"
-              className="w-full h-full object-contain"
+              className="w-20 h-20 object-contain"
             />
           </div>
-
           {/* Right */}
           <div className="hidden lg:flex space-x-8 items-center">
             {navLinks.slice(3).map((link) => (
-              <Link key={link.name} to={link.path} className="hover:text-blue-500">
+              <Link key={link.name} to={link.path} className="text-md text-xl hover:text-[#EBAA3E] nav-items">
                 {link.name}
               </Link>
             ))}
-
             {/* Dropdown */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className="hover:text-blue-500 ">Pages</button>
               <div className="absolute hidden group-hover:block bg-white shadow mt-2 w-40">
                 <a href="#" className="block px-4 py-2 hover:bg-gray-100">Features</a>
                 <a href="#" className="block px-4 py-2 hover:bg-gray-100">Team</a>
               </div>
-            </div>
+            </div> */}
           </div>
-
-          {/* Mobile */}
+          {/* Mobile  Manu Icon*/}
           <Checkbox isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
-      </div>
-
+      </div>                               
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden px-4 py-4 space-y-2 bg-white shadow transform transition-all duration-500 ease-in ${isOpen
-            ? "opacity-100 translate-y-0 max-h-96"
-            : "opacity-0 -translate-y-4 max-h-0 overflow-hidden"
-          }`}
+  className={`lg:hidden fixed top-0 right-0 w-72 h-screen bg-white z-40 shadow-2xl
+  transform transition-all duration-500 ease-in-out
+  ${isOpen ? "translate-x-0 translate-y-0 opacity-100" : "translate-x-full -translate-y-10 opacity-0"}`}
+>
+  <div className="flex flex-col justify-center items-center h-full space-y-8 text-center">
+    
+    {navLinks.map((link) => (
+      <Link
+        key={link.name}
+        href={link.path}
+        className="text-2xl font-semibold text-gray-800 hover:text-[#EBAA3E] transition nav-items"
+        onClick={() => setIsOpen(false)}
       >
-        {navLinks.map((link) => (
-          <Link key={link.name} href={link.path} className="block">
-            {link.name}
-          </Link>
-        ))}
-      </div>
+        {link.name}
+      </Link>
+    ))}
+
+  </div>
+</div>
     </nav>
   );
 };
